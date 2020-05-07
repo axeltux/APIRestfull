@@ -80,20 +80,20 @@ class UserController extends ApiController
         }
 
         if ($request->has('email') && $user->email != $request->email) {
-            $user->verified = User::USUARIO_NO_VERIFICADO;
-            $user->verification_token = User::generarVerificationToken();
-            $user->email = $request->email;
+            $user->verified             = User::USUARIO_NO_VERIFICADO;
+            $user->verification_token   = User::generarVerificationToken();
+            $user->email                = $request->email;
         }
 
         if ($request->has('password')) {
-            $user->password = bcrypt($request->password);
+            $user->password             = bcrypt($request->password);
         }
 
         if ($request->has('admin')) {
             if (!$user->esVerificado()) {
                 return $this->errorResponse('Unicamente los usuarios verificados pueden cambiar su valor de administrador', 409);
             }
-            $user->admin = $request->admin;
+            $user->admin                = $request->admin;
         }
 
         if (!$user->isDirty()) {

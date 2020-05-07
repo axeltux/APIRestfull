@@ -33,21 +33,21 @@ class SellerProductController extends ApiController
     public function store(Request $request, User $seller)
     {
         $rules = [
-            'name' => 'required',
-            'description' => 'required',
-            'quantity' => 'required|integer|min:1',
-            'image' => 'required|image',
+            'name'          => 'required',
+            'description'   => 'required',
+            'quantity'      => 'required|integer|min:1',
+            'image'         => 'required|image',
         ];
 
         $this->validate($request, $rules);
 
-        $data = $request->all();
+        $data               = $request->all();
 
-        $data['status'] = Product::PRODUCTO_NO_DISPONIBLE;
-        $data['image'] = '1.jpg';
-        $data['seller_id'] = $seller->id;
+        $data['status']     = Product::PRODUCTO_NO_DISPONIBLE;
+        $data['image']      = '1.jpg';
+        $data['seller_id']  = $seller->id;
 
-        $product = Product::create($data);
+        $product            = Product::create($data);
 
         return $this->showOne($product, 201);
     }
@@ -63,9 +63,9 @@ class SellerProductController extends ApiController
     public function update(Request $request, Seller $seller, Product $product)
     {
         $rules = [
-            'quantity' => 'integer|min:1',
-            'status' => 'in: ' . Product::PRODUCTO_DISPONIBLE . ',' . Product::PRODUCTO_NO_DISPONIBLE,
-            'image' => 'image',
+            'quantity'  => 'integer|min:1',
+            'status'    => 'in: ' . Product::PRODUCTO_DISPONIBLE . ',' . Product::PRODUCTO_NO_DISPONIBLE,
+            'image'     => 'image',
         ];
 
         $this->validate($request, $rules);

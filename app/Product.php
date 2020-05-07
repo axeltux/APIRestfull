@@ -15,7 +15,7 @@ class Product extends Model
     const PRODUCTO_DISPONIBLE    = 'disponible';
     const PRODUCTO_NO_DISPONIBLE = 'no disponible';
 
-    protected $dates = ['deleted_at'];
+    protected $dates    = ['deleted_at'];
     protected $fillable = [
         'name',
         'description',
@@ -24,7 +24,7 @@ class Product extends Model
         'image',
         'seller_id'
     ];
-    protected $hidden = [
+    protected $hidden   = [
         'pivot'
     ];
 
