@@ -110,6 +110,9 @@ class SellerProductController extends ApiController
         return $this->showOne($product);
     }
 
+    /**
+     * Verificar si el vendedor corresponde al del producto
+     */
     protected function verificarVendedor(Seller $seller, Product $product)
     {
         if($seller->id != $product->seller_id) {
