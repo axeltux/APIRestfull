@@ -1,10 +1,10 @@
 <?php
 
-namespace APIRestfull;
+namespace App;
 
-use APIRestfull\Seller;
-use APIRestfull\Category;
-use APIRestfull\Transaction;
+use App\Seller;
+use App\Category;
+use App\Transaction;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 

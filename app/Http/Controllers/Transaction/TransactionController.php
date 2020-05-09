@@ -1,10 +1,10 @@
 <?php
 
-namespace APIRestfull\Http\Controllers\Transaction;
+namespace App\Http\Controllers\Transaction;
 
-use APIRestfull\Transaction;
+use App\Transaction;
 use Illuminate\Http\Request;
-use APIRestfull\Http\Controllers\ApiController;
+use App\Http\Controllers\ApiController;
 
 class TransactionController extends ApiController
 {
@@ -23,7 +23,7 @@ class TransactionController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param  \APIRestfull\Transaction  $transaction
+     * @param  \App\Transaction  $transaction
      * @return \Illuminate\Http\Response
      */
     public function show(Transaction $transaction)

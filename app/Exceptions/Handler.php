@@ -1,10 +1,10 @@
 <?php
 
-namespace APIRestfull\Exceptions;
+namespace App\Exceptions;
 
 use config;
 use Exception;
-use APIRestfull\Traits\ApiResponser;
+use App\Traits\ApiResponser;
 use Illuminate\Database\QueryException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Validation\ValidationException;

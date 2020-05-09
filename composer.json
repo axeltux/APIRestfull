@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "APIRestfull\\": "app/"
+            "App\\": "app/"
         },
         "classmap": [
             "database/seeds",

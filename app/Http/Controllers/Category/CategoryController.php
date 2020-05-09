@@ -1,10 +1,10 @@
 <?php
 
-namespace APIRestfull\Http\Controllers\Category;
+namespace App\Http\Controllers\Category;
 
-use APIRestfull\Category;
+use App\Category;
 use Illuminate\Http\Request;
-use APIRestfull\Http\Controllers\ApiController;
+use App\Http\Controllers\ApiController;
 
 class CategoryController extends ApiController
 {
@@ -42,7 +42,7 @@ class CategoryController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param  \APIRestfull\Category  $category
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function show(Category $category)
@@ -54,7 +54,7 @@ class CategoryController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \APIRestfull\Category  $category
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Category $category)
@@ -76,7 +76,7 @@ class CategoryController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \APIRestfull\Category  $category
+     * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
     public function destroy(Category $category)

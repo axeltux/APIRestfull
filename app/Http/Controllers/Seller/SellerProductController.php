@@ -1,12 +1,12 @@
 <?php
 
-namespace APIRestfull\Http\Controllers\Seller;
+namespace App\Http\Controllers\Seller;
 
-use APIRestfull\User;
-use APIRestfull\Seller;
-use APIRestfull\Product;
+use App\User;
+use App\Seller;
+use App\Product;
 use Illuminate\Http\Request;
-use APIRestfull\Http\Controllers\ApiController;
+use App\Http\Controllers\ApiController;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class SellerProductController extends ApiController
@@ -27,7 +27,7 @@ class SellerProductController extends ApiController
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \APIRestfull\User  $seller
+     * @param  \App\User  $seller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request, User $seller)
@@ -56,8 +56,8 @@ class SellerProductController extends ApiController
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \APIRestfull\Seller  $seller
-     * @param  \APIRestfull\Product  $product
+     * @param  \App\Seller  $seller
+     * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Seller $seller, Product $product)
@@ -98,7 +98,7 @@ class SellerProductController extends ApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \APIRestfull\Seller  $seller
+     * @param  \App\Seller  $seller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Seller $seller, Product $product)

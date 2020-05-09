@@ -1,9 +1,9 @@
 <?php
 
-namespace APIRestfull;
+namespace App;
 
-use APIRestfull\Product;
-use APIRestfull\Scopes\SellerScope;
+use App\Product;
+use App\Scopes\SellerScope;
 
 class Seller extends User
 {

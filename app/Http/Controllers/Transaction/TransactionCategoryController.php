@@ -1,10 +1,10 @@
 <?php
 
-namespace APIRestfull\Http\Controllers\Transaction;
+namespace App\Http\Controllers\Transaction;
 
-use APIRestfull\Transaction;
+use App\Transaction;
 use Illuminate\Http\Request;
-use APIRestfull\Http\Controllers\ApiController;
+use App\Http\Controllers\ApiController;
 
 class TransactionCategoryController extends ApiController
 {
