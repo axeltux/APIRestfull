@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace APIRestfull\Http\Controllers\Product;
 
-use App\Product;
+use APIRestfull\Product;
 use Illuminate\Http\Request;
-use App\Http\Controllers\ApiController;
+use APIRestfull\Http\Controllers\ApiController;
 
 class ProductController extends ApiController
 {
@@ -23,7 +23,7 @@ class ProductController extends ApiController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \APIRestfull\Product  $product
      * @return \Illuminate\Http\Response
      */
     public function show(Product $product)
